@@ -7,16 +7,31 @@
     <title>Vanilla App Template</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <load src="./partials/header.html" />
 
     <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+      <load src="./partials/hero.html" />
+      <div class="container">
+        <section class="exercises-section">
+          <load src="./partials/filters.html" />
+          <div class="exercises-holder">
+            <div class="exercises-cards">
+              <load src="./partials/categories.html" />
+              <load src="./partials/exercises.html" />
+              <load src="./partials/pagination.html" />
+            </div>
+            <load src="./partials/quote.html" />
+          </div>
+        </section>
+      </div>
     </main>
 
     <load src="./partials/footer.html" />
+    <load src="./partials/mobile-menu.html" />
+    <load src="./partials/modal.html" />
+    <load src="./partials/scroll-to-top.html" />
 
     <script type="module" src="./main.js"></script>
   </body>
