@@ -2,126 +2,400 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vanilla-app-template/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/Final-Project_Advanced_JavaScrip/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
-    <script type="module" crossorigin src="/vanilla-app-template/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/styles-DvPDDfy5.css">
+    <script type="module" crossorigin src="/Final-Project_Advanced_JavaScrip/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/Final-Project_Advanced_JavaScrip/assets/vendor-BcxMf0ji.js">
+    <link rel="modulepreload" crossorigin href="/Final-Project_Advanced_JavaScrip/assets/menu-KZI7qyW2.js">
+    <link rel="stylesheet" crossorigin href="/Final-Project_Advanced_JavaScrip/assets/vendor-DSue4cjB.css">
+    <link rel="stylesheet" crossorigin href="/Final-Project_Advanced_JavaScrip/assets/menu-BYIEECFm.css">
   </head>
+
   <body>
-    <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="/vanilla-app-template/img/sprite.svg#logo"></use>
-        </svg>
-      </a>
+    <header>
+  <div class="container header">
+    <a href="index.html" class="logo">
+      <svg class="logo">
+        <use href="/Final-Project_Advanced_JavaScrip/img/sprite.svg#icon-logo"></use>
+      </svg>
+    </a>
+
+    <nav>
       <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+        <li>
+          <a href="index.html" class="nav-link">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        <li>
+          <a href="favorites.html" class="nav-link">Favorites</a>
         </li>
       </ul>
     </nav>
+
+    <ul class="social-media-links social-media-links--white">
+      <li>
+        <a
+          href="https://www.facebook.com/goITclub/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <svg width="28" height="28">
+            <use href="/Final-Project_Advanced_JavaScrip/img/sprite.svg#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.instagram.com/goitclub/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <svg width="28" height="28">
+            <use href="/Final-Project_Advanced_JavaScrip/img/sprite.svg#icon-instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.youtube.com/c/GoIT"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <svg width="28" height="28">
+            <use href="/Final-Project_Advanced_JavaScrip/img/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <button class="burger-menu" type="button">
+      <svg class="burger">
+        <use href="/Final-Project_Advanced_JavaScrip/img/sprite.svg#icon-burger"></use>
+      </svg>
+    </button>
   </div>
 </header>
 
 
     <main>
-      <!-- Loads the specified .html file -->
-      <section class="vite-promo">
+      <section class="hero-section">
   <div class="container">
-    <div class="vite-promo-thumb">
-      <a
-        class="vite-promo-link"
-        href="https://vitejs.dev/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Link to Vite official website"
-        title="Vite.js  build tool"
-      >
-        <!-- Path to images as from index.html file -->
-        <img
-          class="pic"
-          src="/vanilla-app-template/assets/vite-logo-9o_aqrTe.png"
-          alt="Vite logo"
-          width="640"
-          height="640"
-        />
-      </a>
+    <div class="hero-content-holder">
+      <div>
+        <h1 class="hero-title">
+          <svg>
+            <use href="/Final-Project_Advanced_JavaScrip/img/sprite.svg#icon-sun"></use>
+          </svg>
+          Get <span>Body</span> in shape, Stay healthy
+        </h1>
+        <p class="hero-description">
+          Transform your physique and embrace a healthier lifestyle with our
+          comprehensive fitness and nutrition support.
+        </p>
+      </div>
+      <div class="desktop-tags-holder">
+        <picture>
+          <source
+            media="(min-width: 1440px)"
+            srcset="/Final-Project_Advanced_JavaScrip/assets/tags-Bx0VQGNL.jpg 1x, /Final-Project_Advanced_JavaScrip/assets/tags@2x-BfXtZUTw.jpg 2x"
+          />
+          <img src="/Final-Project_Advanced_JavaScrip/assets/tags-Bx0VQGNL.jpg" alt="yoga" />
+        </picture>
+        <ul class="tags desktop-tags">
+          <li>#Sport</li>
+          <li>#Healthy</li>
+          <li>#Workout</li>
+          <li>#Diet</li>
+        </ul>
+      </div>
     </div>
-    <h1 class="main-title">
-      <span class="main-title-gradient">Vite</span>
-      Template by
-      <a
-        class="main-title-link"
-        href="https://github.com/goitacademy/vanilla-app-template"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT
-      </a>
-    </h1>
+
+    <picture>
+      <!-- Mobile image -->
+      <source
+        media="(max-width: 767px)"
+        srcset="/Final-Project_Advanced_JavaScrip/assets/hero-mobile-DuTO87HP.jpg 1x, /Final-Project_Advanced_JavaScrip/assets/hero-mobile@2x-CDlPOh-y.jpg 2x"
+      />
+      <!-- Tablet image -->
+      <source
+        media="(min-width: 767px) and (max-width: 1439px)"
+        srcset="/Final-Project_Advanced_JavaScrip/assets/hero-tablet-CO4RLi7g.jpg 1x, /Final-Project_Advanced_JavaScrip/assets/hero-tablet@2x-kWxRp9BT.jpg 2x"
+      />
+      <!-- Desktop image -->
+      <source
+        media="(min-width: 1440px)"
+        srcset="/Final-Project_Advanced_JavaScrip/assets/hero-desktop-DtQpedGp.jpg 1x, /Final-Project_Advanced_JavaScrip/assets/hero-desktop@2x-DVWA3du4.jpg 2x"
+      />
+      <img class="hero-img" src="/Final-Project_Advanced_JavaScrip/assets/hero-desktop-DtQpedGp.jpg" alt="girls" />
+    </picture>
+    <ul class="tags">
+      <li>#Sport</li>
+      <li>#Healthy</li>
+      <li>#Workout</li>
+      <li>#Diet</li>
+    </ul>
   </div>
 </section>
 
-      <article class="badges">
-  <div class="container">
-    <ul class="badges-list">
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-html-inject"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          HTML Inject
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-full-reload"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Full Reload
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/postcss-sort-media-queries"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Sort Media Queries
-        </a>
-      </li>
-    </ul>
-  </div>
-</article>
+      <div class="container">
+        <section class="exercises-section">
+          <div class="filters-holder">
+  <h2 class="filters-title">Exercises</h2>
+  <form class="search-form" role="search">
+    <input
+      type="text"
+      class="search-input"
+      placeholder="Search"
+      aria-label="Search"
+    />
+    <button type="button" class="clear-button" aria-label="Clear search">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        fill="none"
+      >
+        <path
+          stroke="#242424"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="m12.75 5.25-7.5 7.5m0-7.5 7.5 7.5"
+        />
+      </svg>
+    </button>
+    <button type="submit" class="search-button" aria-label="Submit search">
+      <svg width="18" height="18">
+        <use href="/Final-Project_Advanced_JavaScrip/img/sprite.svg#icon-search"></use>
+      </svg>
+    </button>
+  </form>
+  <ul class="filters" id="filters">
+    <li>
+      <button type="button" class="filter-button active" data-filter="Muscles">
+        Muscles
+      </button>
+    </li>
+    <li>
+      <button type="button" class="filter-button" data-filter="Body parts">
+        Body parts
+      </button>
+    </li>
+    <li>
+      <button type="button" class="filter-button" data-filter="Equipment">
+        Equipment
+      </button>
+    </li>
+  </ul>
+</div>
 
+          <div class="exercises-holder">
+            <div class="exercises-cards">
+              <div class="categories">
+    <ul class="categories-list">
+    </ul>
+</div>
+
+              <div class="exercises-container">
+  <ul class="exercises-list"></ul>
+</div>
+
+              <div class="pagination"></div>
+
+            </div>
+            <div class="quote-container">
+  <div class="quote-card">
+    <div>
+      <svg class="quote-icon">
+        <use href=" ./img/sprite.svg#icon-running-man"></use>
+      </svg>
+    </div>
+
+    <div>
+      <div class="quote-title-holder">
+        <h3 class="title">Quote of the day</h3>
+        <svg class="inverted-comas-icon">
+          <use href=" ./img/sprite.svg#icon-inverted-comas"></use>
+        </svg>
+      </div>
+      <p class="description">Loading quote...</p>
+      <p class="quote-author"></p>
+    </div>
+  </div>
+  <picture>
+    <!-- Mobile image -->
+    <source
+      media="(max-width: 767px)"
+      srcset="/Final-Project_Advanced_JavaScrip/assets/qoute-mobile-CPP46gBM.jpg 1x, /Final-Project_Advanced_JavaScrip/assets/qoute-mobile@2x-BN_WvWna.jpg 2x"
+    />
+    <!-- Tablet image -->
+    <source
+      media="(min-width: 767px) and (max-width: 1439px)"
+      srcset="/Final-Project_Advanced_JavaScrip/assets/qoute-tablet-DV8hU1TX.jpg 1x, /Final-Project_Advanced_JavaScrip/assets/qoute-tablet@2x-DXqywC4S.jpg 2x"
+    />
+    <!-- Desktop image -->
+    <source
+      media="(min-width: 1440px)"
+      srcset="/Final-Project_Advanced_JavaScrip/assets/qoute-desktop-BqZUJP1D.jpg 1x, /Final-Project_Advanced_JavaScrip/assets/qoute-desktop@2x-BXt4fF_U.jpg 2x"
+    />
+    <img class="quote-image" src="/Final-Project_Advanced_JavaScrip/assets/qoute-desktop-BqZUJP1D.jpg" alt="girls" />
+  </picture>
+
+  <div class="quote-card white">
+    <div>
+      <svg class="quote-icon">
+        <use href="/Final-Project_Advanced_JavaScrip/img/sprite.svg#icon-dumb-bell"></use>
+      </svg>
+    </div>
+    <div>
+      <div class="subtitle-holder">
+        <h3 class="title">110 min</h3>
+        <h4 class="subtitle">Daily norm of sports</h4>
+      </div>
+      <p class="description truncate-text">
+        The World Health Organization recommends at least 150 minutes of
+        moderate-intensity aerobic physical activity throughout the week for
+        adults aged 18-64. However, what happens if we adjust that number to 110
+        minutes every day? While it might seem like a high number to hit,
+        dedicating 110 minutes daily to sporting activities may offer
+        unparalleled benefits to physical health, mental well-being, and overall
+        quality of life.
+      </p>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="footer">
   <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+    <div class="footer-content-holder">
+      <div class="logo-section">
+        <a href="index.html" class="logo">
+          <svg class="logo">
+            <use href="/Final-Project_Advanced_JavaScrip/img/sprite.svg#icon-logo"></use>
+          </svg>
+        </a>
+        <ul class="social-media-links">
+          <li>
+            <a
+              href="https://www.facebook.com/goITclub/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg width="28" height="28">
+                <use href="/Final-Project_Advanced_JavaScrip/img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/goitclub/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg width="28" height="28">
+                <use href="/Final-Project_Advanced_JavaScrip/img/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/c/GoIT"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg width="28" height="28">
+                <use href="/Final-Project_Advanced_JavaScrip/img/sprite.svg#icon-youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <h2 class="footer-title">
+        Transforming your <span>body</span> shape with us
+      </h2>
+      <div class="subscription-form-holder">
+        <h3>Subscribe and learn about new exercises!</h3>
+        <form class="subscription-form" id="subscription-form">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <ul class="privacy-policy">
+      <li>Your Energy. All rights reserved.</li>
+      <li>Privacy Policy / Terms of Service</li>
+      <li>©2024</li>
+    </ul>
   </div>
 </footer>
+
+    <div class="menu-backdrop"></div>
+<div class="menu">
+  <button class="close-menu-button"></button>
+  <nav>
+    <ul class="mobile-nav-list">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="favorites.html">Favorites</a>
+      </li>
+    </ul>
+  </nav>
+  <ul class="social-media-links">
+    <li>
+      <a
+        href="https://www.facebook.com/goITclub/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <svg width="28" height="28">
+          <use href="/Final-Project_Advanced_JavaScrip/img/sprite.svg#icon-facebook"></use>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.instagram.com/goitclub/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <svg width="28" height="28">
+          <use href="/Final-Project_Advanced_JavaScrip/img/sprite.svg#icon-instagram"></use>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.youtube.com/c/GoIT" target="_blank" rel="noreferrer">
+        <svg width="28" height="28">
+          <use href="/Final-Project_Advanced_JavaScrip/img/sprite.svg#icon-youtube"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+
+    <div class="modal-backdrop"></div>
+<div class="modal"></div>
+</div>
+
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">
+  <svg width="20" height="20">
+    <use href=" ./img/sprite.svg#icon-arrow-top"></use>
+  </svg>
+</button>
 
 
   </body>
