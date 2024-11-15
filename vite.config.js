@@ -30,6 +30,9 @@ export default defineConfig(({ command }) => {
             if (assetInfo.name && assetInfo.name.endsWith('.html')) {
               return '[name].[ext]';
             }
+            if (assetInfo.name === 'sprite.svg') {
+              return 'img/[name][extname]';
+            }
             return 'assets/[name]-[hash][extname]';
           },
         },
@@ -39,7 +42,7 @@ export default defineConfig(({ command }) => {
     },
     plugins: [
       injectHTML(),
-      FullReload(['./src/**/**.html']),
+      FullReload(['./src/**/**.html', './src/img/sprite.svg']),
       SortCss({
         sort: 'mobile-first',
       }),
